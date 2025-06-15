@@ -17,6 +17,9 @@ function generateQuestion(event) {
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${questionPrompt}&context=${context}&key=${apiKey}`;
 
   axios.get(apiUrl).then(displayQuestion);
+
+  let questionElement = document.querySelector("#question_type");
+  questionElement.innerHTML = `Generating interview question for ${careerInput.value}...just a sec!`;
 }
 
 let questionFormElement = document.querySelector("#question_generator_form");
