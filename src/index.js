@@ -13,7 +13,7 @@ function generateQuestion(event) {
   let apiKey = "a723fd412o41a9d1a23tfcb7443f0307";
   let context =
     "You are an AI assistant that helps individuals with common interview questions for any career. ";
-  let questionPrompt = `Supply an interview question based on ${careerInput.value} career field and then provide only 2  simple hints on how the question should be answered after supplying the question. Separate interview question from hints.`;
+  let questionPrompt = `Supply an interview question based on ${careerInput.value} career field and then provide only 2  simple hints on how the question should be answered after supplying the question. Separate interview question from hints. Provide  <br /> <br /> between interview question and hints. Also add a <br/> between each hint.`;
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${questionPrompt}&context=${context}&key=${apiKey}`;
 
   axios.get(apiUrl).then(displayQuestion);
