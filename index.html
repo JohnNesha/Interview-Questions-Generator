@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Interview Questions</title>
     <link rel="stylesheet" href="./src/styles.css" />
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -20,12 +22,13 @@
           required
           autocomplete="off"
           class="career-type"
+          id="career_question"
         />
         <input type="submit" 
         class="submit-button"
         />
       </form>
-      <div class="question">Question will go here</div>
+      <div class="question" id="question_type"></div>
     </main>
     <footer>
       This was coded by
